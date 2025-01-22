@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+/* Import de la font Syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+/* Define CSS variables */
+:root {
+   --primary-color: #3B8E46;
+}
+
+
+
+body * {
+    font-family: 'Syne', sans-serif;
+}
+
+a:hover * {
+   text-decoration: inherit;
+}
+
+
+.elementor-element,
+.elementor-widget-container {
+   max-width: 2000px !important;
+}
+
+
+
+
+
+/*     HEADER     */
+
+
+#site-header {
+   width: 100%;
+   height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between !important;
+   margin: 0 !important;
+}
+
+.header-inner.section-inner {
+   display: flex;
+   justify-content: space-between !important;
+   width: 100%;
+   margin: 0;
+}
+
+/* Loggo */
+.site-logo img {
+   padding-left: 8%;
+   max-height: 45px;
+}
+
+/* Menu */
+.primary-menu > li > a{
+   color: black !important;
+   display: flex;
+   align-items: center;
+   padding: 30px;
+   margin: 0;
+   font-size: 16px;
+   text-decoration: none !important;
+}
+
+.primary-menu > li > a:hover {
+   font-weight: 600; /* Gras léger au survol */
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.primary-menu > li.current-menu-item > a {
+   font-weight: 600; /* Gras sur l'élément actif */
+   text-decoration: none !important;
+}
+
+#menu-item-47 a,
+#menu-item-47 a:hover,
+#menu-item-47.current-menu-item > a {
+   color: white !important;
+   background-color: #E0B9B4;
+   padding: 30px 67px;
+   margin: 0;
+   font-size: 18px;
+   font-weight: 400; /* Jamais de gras */
+   letter-spacing: 1px;
+}
+
+#menu-item-47 a:hover {
+   background-color: #C02E44;
+}
+
+#menu-item-48 {
+   order: 1; /* Nous rencontrer */
+}
+
+.admin {
+   order: 2; /* Admin */
+}
+
+#menu-item-47 {
+   order: 3; /* Commander */
+}
+
+
+/*     FOOTER     */
+
+
+/* Réinitialisation des marges et des rembourrages */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Pour que l'image occupe toute la largeur de la page */
+.full-width-image {
+   width: 100%;
+   overflow: hidden; /* Empêche l'image de déborder de la largeur de la page */
+}
+
+.full-width-image__img {
+   width: 100%;
+   display: block; /* Pour que l'image s'étende sur toute la largeur */
+}
+
+
+#site-footer {
+   padding: 20px;
+   text-align: center;
+   color: black !important;
+   text-decoration: none !important;
+}
+
+#site-footer a {
+   color: black;
+   text-decoration: none !important;
+   cursor: pointer;
+}
+
+
+/*     ACCUEIL     */
+
+
+#image_accueil {
+   display: block !important;
+   position: relative !important;
+    /* Contexte pour le positionnement absolu */
+   width: 100%; /* Adapte à la largeur de la section ou conteneur */
+   height: auto; /* Ajustez selon la taille des images */
+   justify-content: center;
+   align-content: center;
+   margin-bottom: 0%;
+   padding-bottom: 0%;
+   margin-top: 23%;
+}
+
+
+/* Image de la branche gauche */
+.branche_gauche {
+   position: absolute;
+   left: 18.75%; /* Place à gauche */
+   top: 50%; /* Centre verticalement */
+   margin-bottom: 0%;
+   transform: translateY(-50%); /* Corrige l'alignement vertical */
+   z-index: 1; /* Derrière la canette */
+}
+
+/* Image de la branche droite */
+.branche_droite {
+   position: absolute;
+   right: 21%; /* Place à droite */
+   top: 50%; /* Centre verticalement */
+   margin-bottom: 0%;
+   transform: translateY(-50%); /* Corrige l'alignement vertical */
+   z-index: 1; /* Derrière la canette */
+}
+
+/* Image centrale de la canette */
+.canette {
+   position: absolute;
+   left: 13%; /* Centre horizontalement */
+   top: 50%; /* Centre verticalement */
+   margin-bottom: 0%;
+   transform: translate(-50%, -50%); /* Corrige le centrage complet */
+   z-index: 2; /* Devant les branches */
+}
+#bouton_commander:hover {
+   background-color: #C02E44;
+}
+
+
+/*     NOUS RENCONTRER     */
+
+
+/***   Formulaire   ***/
+
+.wpcf7-form label {
+   display: block;
+   margin-top: 1px;
+   font-size: 21px;
+   line-height: 1.8; /* Gère l'espacement interne */
+}
+
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-select {
+      width: 100%;
+      max-width: 500px;
+      box-sizing: border-box; /* Inclut padding et bordure dans la largeur totale */
+   border: none;
+   justify-content: center;
+   margin-top: 10px;
+   height: 75px;
+   border-radius: 7px;
+}
+
+.wpcf7-form-control.wpcf7-textarea {
+   border: none;
+   margin-top: 10px;
+   height: 250px;
+   border-radius: 7px;
+}
+
+
+.wpcf7-form .wpcf7-submit {
+   display: block; /* Transforme le bouton en bloc */
+   margin: 20px auto; /* Centre horizontalement (auto) */
+   padding: 19px 65px; /* Ajuste les marges intérieures */
+   font-size: 15px; /* Taille de la police */
+   color: #ffff;
+   font-weight: 100;
+   height: auto;
+   background-color: #E0B9B4;
+   border-radius: 5px;
+   text-transform: none;
+}
+
+.wpcf7-form .wpcf7-submit:hover {
+   text-decoration: none;
+   background-color: #C02E44;
+   cursor: pointer;
+}
+
+
+/*     COMMANDER     */
+
+
+.elementor.elementor-10 {
+   background-color: #3B8E46; 
+}
+
+#img_compteurs {
+   max-height: 135px;
+}
+
+#box_img_compteurs{
+   max-height: 150px;
+}
+
+/*****     Formulaire     *****/
+
+/*conteneur parent de .form_commander*/
+.elementor-element.elementor-widget__width-initial {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   width: 100%;
+   max-width: 100%; /* Empêche des restrictions de largeur */
+   margin: 0 auto; /* Supprime tout décalage horizontal */
+   padding: 0; /* Supprime les padding hérités */
+}
+
+
+.form_commander {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: flex-start; /* Aligne les tables en haut */
+   gap: 45px; /* Espace autour du vertical-divider */
+   width: 100%;
+   max-width: 1200px; /* Ajustez selon les besoins */
+   margin: 0 auto; /* Centre (horizontalement) le conteneur DANS LA PAGE */
+   padding: 0;
+   border: none;
+}
+
+
+   .form-table {
+      display: flex;
+      flex: 1; /* Partage équitable de l'espace entre les colonnes */
+      margin: 0;
+      padding: 0;
+      justify-content: space-between;
+      flex-direction: column;
+      color: #ffff;
+      border: none; /* Supprime l'encadré autour de la table */
+      border-collapse: collapse; /* Évite les doubles bordures */
+      width: 45%;
+      text-align: left; /* Aligne le texte à gauche */
+   }
+
+   .form-table th {
+      font-size: 30px;
+      letter-spacing: 1px;
+      border: none;
+      margin: 0;
+      padding: 10px 0 0 0;
+      text-align: left !important; /* Aligne le titre à gauche */
+   }
+
+   
+   .form-table td {
+      border: none;
+      width: 405px;
+      margin: 0;
+      padding: 0;
+      text-align: left !important; /* Aligne le contenu à gauche */
+   }
+
+   .form-table label {
+      display: block;
+      font-size: 20px;
+      line-height: 1.8; /* Gère l'espacement interne */
+      text-align: left; /* Aligne le label à gauche */
+   }
+
+ /* Ligne verticale entre les deux tables */
+   .vertical-divider {
+      align-self: center;
+      height: 470px;
+      width: 1px; /* Épaisseur de la ligne */
+      background-color: #ffff; /* Couleur de la ligne */
+   }
+
+
+
+
+
+/*     Media Queries     */
+
+
+
+@media screen and (max-width: 767px) {   /* écran mobile */
+
+
+   
+/* Menu */
+
+   .menu-modal nav *{
+      display: flex;
+      flex-direction: column;
+      border-color: white !important;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white !important;
+      background-color: #E0B9B4;
+   }
+
+   .modal-menu li {
+      display: flex;
+      text-decoration: none;
+      color: black;
+      justify-content: center;   
+   }
+
+   .modal-menu a:focus { /*utilité à vérifier, je crois que ça ne fait qu'inverser le font-color noir et blanc*/
+      text-decoration: none;
+      color: #C02E44;
+      font-weight: bold !important;
+   }
+
+ /*****il doit y avoir un ou deux selecteurs de trop qui empêchent le weight:bold de fonctionner, à voir*****/
+   .modal-menu a:hover, .modal-menu li.current-menu-item > .ancestor-wrapper > a, .modal-menu li.current_page_ancestor > .ancestor-wrapper > a {
+      text-decoration: none;
+      color: black !important;
+      font-weight: bold !important;
+   }
+
+
+/*   ACCUEIL   */
+
+
+ /*****effacement de l'espace vide créé par le conteneur #image_accueil, en négatif*****/
+   .elementor-element-0d5f51d.e-con-full.e-flex.e-con.e-child {
+      display: none;
+   }
+
+
+   body > div.elementor.elementor-10 > div.elementor-element.elementor-element-5c2918c.e-flex.e-con-boxed.e-con.e-parent.e-lazyloaded {
+      margin: 0;
+      padding: 0;
+   }
+
+   #image_accueil {
+      display: block !important;
+      position: relative !important;
+    /* Contexte pour le positionnement absolu */
+      width: 100%; /* Adapte à la largeur de la section ou conteneur */
+      height: auto; /* Ajustez selon la taille des images */
+      margin: 0 auto; /* Annule les marges négatives */
+      padding: 0 20px; /* Ajoute un léger padding pour aérer */
+      box-sizing: border-box; /* Empêche le débordement horizontal */
+      justify-content: center;
+      align-content: center;
+      flex-direction: row;
+   }
+
+
+ /* Image de la branche gauche */
+   .branche_gauche {
+      position: absolute;
+      left: 5%; /* Place à gauche */
+      top: 50%; /* Centre verticalement */
+      transform: translateY(-50%); /* Corrige l'alignement vertical */
+      z-index: 1; /* Derrière la canette */
+   }
+
+ /* Image de la branche droite */
+   .branche_droite {
+      position: absolute;
+      right: 20%; /* Place à droite */
+      top: 50%; /* Centre verticalement */
+      transform: translateY(-50%); /* Corrige l'alignement vertical */
+      z-index: 1; /* Derrière la canette */
+   }
+
+ /* Image centrale de la canette */
+   .canette {
+      position: absolute;
+      left: 0%; /* Centre horizontalement */
+      right: 100%;
+      top: 50%; /* Centre verticalement */
+      transform: translateX(-95%); /* Corrige le centrage complet */
+      z-index: 2; /* Devant les branches */
+   }
+
+
+/*   NOUS RENCONTRER   */
+
+
+   #photos_team {
+      max-width: 100% !important;
+      overflow: hidden;
+   }
+
+
+/*     COMMANDER     */
+
+
+ /***   Formulaires   ***/
+
+
+
+ .form_commander {
+   display: flex;
+   flex-direction: column;
+}
+
+.form-table{
+   width: 100%;
+}
+
+   .form-table td {
+         border: none; /* Supprime l'encadré autour de la table */
+         border-collapse: collapse; /* Évite les doubles bordures */
+   }
+
+   .wpcf7-form-control.wpcf7-text,
+   .wpcf7-form-control.wpcf7-select {
+      margin-top: 5px;
+      height: 30px;
+   }
+
+   .wpcf7-form-control.wpcf7-textarea {
+      height: 175px;
+      border-radius: 7px;
+   }
+
+   .form-table th {
+      font-size: 20px;
+      padding-top: 30px;
+   }
+
+   .form-table label {
+      font-size: 15px;
+   }
+
+   .wpcf7-form .wpcf7-submit {
+      justify-content: center;
+      margin-top: 40px;
+      padding: 10px 38px;
+      font-size: 15px;
+   }
+
+   .vertical-divider {
+      display: none;
+   }
+
+}
+
+
+
+@media screen and (max-width: 1024px) { /* écran tablette */
+
+
+
+ /* Menu */
+
+   .menu-modal nav *{
+      display: flex;
+      flex-direction: column;
+      border-color: white !important;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white !important;
+      background-color: #E0B9B4;
+   }
+   
+   .modal-menu li {
+      display: flex;
+      text-decoration: none;
+      color: black;
+      justify-content: center;
+   }
+
+   .modal-menu a:focus { /*utilité à vérifier, je crois que ça ne fait qu'inverser le font-color noir et blanc*/
+      text-decoration: none;
+      color: #C02E44;
+      font-weight: bold !important;
+   }
+   
+ /*****il doit y avoir un ou deux selecteurs de trop qui empêchent le weight:bold de fonctionner, à voir*****/
+   .modal-menu a:hover, .modal-menu li.current-menu-item > .ancestor-wrapper > a, .modal-menu li.current_page_ancestor > .ancestor-wrapper > a {
+      text-decoration: none;
+      color: black !important;
+      font-weight: bold !important;
+      justify-self: center;
+   }
+   
+
+/*     ACCUEIL     */
+   
+
+   #image_accueil {
+      display: block !important;
+      position: relative !important;
+       /* Contexte pour le positionnement absolu */
+      width: 100%; /* Adapte à la largeur de la section ou conteneur */
+      height: auto; /* Ajustez selon la taille des images */
+      justify-content: center;
+      align-content: center;
+   }
+   
+   
+ /* Image de la branche gauche */
+   .branche_gauche {
+      position: absolute;
+      left: 6.5%; /* Place à gauche */
+      top: 50%; /* Centre verticalement */
+      transform: translateY(-50%); /* Corrige l'alignement vertical */
+      z-index: 1; /* Derrière la canette */
+   }
+   
+ /* Image de la branche droite */
+   .branche_droite {
+      position: absolute;
+      right: 25%; /* Place à droite */
+      top: 50%; /* Centre verticalement */
+      transform: translateY(-50%); /* Corrige l'alignement vertical */
+      z-index: 1; /* Derrière la canette */
+   }
+   
+ /* Image centrale de la canette */
+   .canette {
+      position: absolute;
+      left: 1%; /* Centre horizontalement */
+      top: 50%; /* Centre verticalement */
+      transform: translate(-50%, -50%); /* Corrige le centrage complet */
+      z-index: 2; /* Devant les branches */
+   }
+
+
+/*     NOUS RENCONTRER     */
+
+
+   #fleur {
+      min-width: 100px;
+   }
+
+
+ /***   Formulaire   ***/
+
+   .form_commander {
+      gap: 15px;
+   }
+
+ /* Supprime tous les encadrés et bordures */
+   .form-table {
+      border: none; /* Supprime l'encadré autour de la table */
+      border-collapse: collapse; /* Évite les doubles bordures */
+      }
+
+ /* Supprime les bordures des cellules */
+   .form-table td {
+      border: none;
+      padding: 0 25px;
+      }
+
+   .wpcf7-form-control.wpcf7-text,
+   .wpcf7-form-control.wpcf7-select {
+      height: 55px;
+   }
+
+   .form-table th {
+      font-size: 25px;
+      padding-left: 25px;
+   }
+
+   .form-table label {
+      font-size: 18px;
+   }
+
+ 
+   .vertical-divider {
+      width: 0.5px; /* Épaisseur de la ligne */
+      height: 380px;
+      background-color: #ffff; /* Couleur de la ligne */
+   }
+
+}
